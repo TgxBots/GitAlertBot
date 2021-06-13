@@ -255,7 +255,7 @@ async def start(client, message):
         ),
     ]
     file = "https://telegra.ph//file/d46c53a9ad6a5b807e042.jpg"
-    msg = f"__Hello__ {message.from_user.mention}. __I Am A Simple Git ALert Bot. I Notify In Chat When My Hook Gets Triggred From Github. You Can Find My Source Code on Github.com__"
+    msg = f"**Hello {message.from_user.mention}** __I Am A Simple Git ALert Bot. I Notify In Chat When My Hook Gets Triggred From Github. You Can Find My Source Code on Github.com__"
     await message.reply_photo(
      file,
      caption=msg,
