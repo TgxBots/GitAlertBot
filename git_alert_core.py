@@ -248,18 +248,19 @@ if config.HEROKU_APP_NAME:
 
 
 @gitbot.on_message(filters.command(["start", "help"]))
-async def bot_(client, message):
+async def start(client, message):
     key_board = [
         InlineKeyboardButton(
             text="Source Code", url="https://github.com/DevsExpo/GitAlertBot"
         ),
     ]
-    file = "https://i.makeagif.com/media/2-18-2016/M3yKm-.gif"
+    file = "https://telegra.ph//file/d46c53a9ad6a5b807e042.jpg"
     msg = f"__Hello__ {message.from_user.mention}. __I Am A Simple Git ALert Bot. I Notify In Chat When My Hook Gets Triggred From Github. You Can Find My Source Code on Github.com__"
-    await message.reply_animation(
-        file, caption=msg, quote=True, reply_markup=InlineKeyboardMarkup([key_board])
+    await message.reply_photo(
+     file,
+     caption=msg,
+     reply_markup=InlineKeyboardMarkup([key_board])
     )
-
 
 async def run():
     logging.info("[Starting] [GitBot] - Bot & Server")
